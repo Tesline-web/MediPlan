@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="createApt" blendMode="MULTIPLY" prefHeight="345.0" prefWidth="268.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mediplan.HomeController">
+   <children>
+      <VBox fx:id="step1" layoutX="19.0" layoutY="69.0" prefHeight="242.0" prefWidth="224.0" visible="true">
+         <TextField fx:id="nameField" promptText="Nom">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="cvField" promptText="Numéro Sécurité Sociale" />
+         <Button fx:id="thisStep1" onAction="#goToStep2" text="Suivant">
+            <VBox.margin>
+               <Insets left="55.0" top="30.0" />
+            </VBox.margin>
+         </Button>
+         <padding>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+
+      <VBox fx:id="step2" layoutX="34.0" layoutY="59.0" visible="false">
+         <TextField fx:id="colField" />
+         <TextField fx:id="rowField" />
+         <Button fx:id="submitButton" onAction="#submitApt" text="Valider">
+            <VBox.margin>
+               <Insets left="62.0" top="150.0" />
+            </VBox.margin></Button>
+      </VBox>
+
+      <Text layoutX="87.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un Patient" wrappingWidth="117.67034912109375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

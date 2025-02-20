@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="684.0" prefWidth="926.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mediplan.HomeController">
+   <children>
+      <GridPane fx:id="planing" gridLinesVisible="true" layoutX="201.0" layoutY="120.0" prefHeight="545.0" prefWidth="716.0" AnchorPane.topAnchor="120.0">
+
+
+        <columnConstraints>
+            <ColumnConstraints fx:id="lundi" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fx:id="mardi" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fx:id="mercredi" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fx:id="jeudi" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints fx:id="vendredi" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints fx:id="huit" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints fx:id="neuf" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints fx:id="dix" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints fx:id="onze" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="douze" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="treize" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="quatorze" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="quinze" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="seize" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="dixsept" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fx:id="dixhuit" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="homeButton" layoutX="251.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="36.0" prefWidth="88.0" text="Accueil" />
+      <ImageView blendMode="MULTIPLY" fitHeight="36.0" fitWidth="38.0" layoutX="201.0" layoutY="31.0">
+         <image>
+            <Image url="@image/home.jpg" />
+         </image>
+      </ImageView>
+      <TextField blendMode="MULTIPLY" layoutX="158.0" layoutY="115.0" prefHeight="26.0" prefWidth="38.0" text="8:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="267.0" prefHeight="26.0" prefWidth="46.0" text="11:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="215.0" prefHeight="26.0" prefWidth="45.0" text="10:00" />
+      <TextField blendMode="MULTIPLY" layoutX="159.0" layoutY="165.0" prefHeight="26.0" prefWidth="38.0" text="9:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="313.0" prefHeight="26.0" prefWidth="45.0" text="12:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="660.0" prefHeight="26.0" prefWidth="46.0" text="19:00" />
+      <TextField blendMode="MULTIPLY" layoutX="154.0" layoutY="615.0" prefHeight="26.0" prefWidth="46.0" text="18:00" />
+      <TextField blendMode="MULTIPLY" layoutX="154.0" layoutY="567.0" prefHeight="26.0" prefWidth="46.0" text="17:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="517.0" prefHeight="26.0" prefWidth="45.0" text="16:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="463.0" prefHeight="26.0" prefWidth="45.0" text="15:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="417.0" prefHeight="26.0" prefWidth="46.0" text="14:00" />
+      <TextField blendMode="MULTIPLY" layoutX="155.0" layoutY="365.0" prefHeight="26.0" prefWidth="45.0" text="13:00" />
+      <ImageView blendMode="MULTIPLY" fitHeight="106.0" fitWidth="143.0" layoutX="14.0" layoutY="14.0">
+         <image>
+            <Image url="@image/logo.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="addApt" layoutX="451.0" layoutY="31.0" mnemonicParsing="false" onAction="#openFormulaire" text="Ajoutez un rendez-vous" />
+      <Button fx:id="deleteApt" layoutX="714.0" layoutY="32.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="194.0" text="Supprimez un rendez-vous" />
+      <Text layoutX="638.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendredi" wrappingWidth="80.79996337890623">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="550.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jeudi" wrappingWidth="46.39999999999998">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="433.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mercredi" wrappingWidth="72.80002441406248">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="339.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mardi" wrappingWidth="46.39999999999998">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="836.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimanche" wrappingWidth="72.80002441406236">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="739.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Samedi" wrappingWidth="72.80002441406236">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="243.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lundi" wrappingWidth="46.39999999999998">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ImageView blendMode="COLOR_BURN" fitHeight="36.0" fitWidth="55.0" layoutX="396.0" layoutY="31.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/rdv.jpg" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="MULTIPLY" fitHeight="36.0" fitWidth="45.0" layoutX="670.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/poubelle.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
