@@ -8,12 +8,13 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="684.0" prefWidth="926.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mediplan.HomeController">
    <children>
-      <GridPane fx:id="planing" gridLinesVisible="true" layoutX="201.0" layoutY="120.0" prefHeight="545.0" prefWidth="716.0" AnchorPane.topAnchor="120.0">
+      <GridPane fx:id="patientGrid" gridLinesVisible="true" layoutX="201.0" layoutY="120.0" prefHeight="545.0" prefWidth="716.0" AnchorPane.topAnchor="120.0">
 
 
         <columnConstraints>
@@ -62,8 +63,8 @@
             <Image url="@image/logo.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="addApt" layoutX="451.0" layoutY="31.0" mnemonicParsing="false" onAction="#openFormulaire" text="Ajoutez un rendez-vous" />
-      <Button fx:id="deleteApt" layoutX="714.0" layoutY="32.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="194.0" text="Supprimez un rendez-vous" />
+      <Button fx:id="addApt" layoutX="451.0" layoutY="31.0" mnemonicParsing="false" onAction="#openFormulaire" text="Ajouter un rendez-vous" />
+      <Button fx:id="deleteApt" layoutX="714.0" layoutY="32.0" mnemonicParsing="false" onAction="#deleteFormulaire" prefHeight="36.0" prefWidth="194.0" text="Supprimer un rendez-vous" />
       <Text layoutX="638.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendredi" wrappingWidth="80.79996337890623">
          <font>
             <Font size="15.0" />
@@ -109,5 +110,8 @@
             <Image url="@image/poubelle.jpg" />
          </image>
       </ImageView>
+      <Button fx:id="alerteButton" layoutX="42.0" layoutY="373.0" mnemonicParsing="false" onAction="#addAlerte" prefHeight="36.0" prefWidth="88.0" text="Rappel" />
+      <VBox layoutX="20.0" layoutY="138.0" prefHeight="106.0" prefWidth="129.0">
+      </VBox>
    </children>
 </AnchorPane>
