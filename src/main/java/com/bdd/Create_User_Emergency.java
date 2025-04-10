@@ -19,12 +19,10 @@ public class Create_User_Emergency {
         }
     }
 
-    // Method to hash password and insert a new user into the database
     public void createUser(String email, String password) {
-        // Hash the password using bcrypt
+
         String hashedPassword = hashPassword(password);
 
-        // SQL query to insert the user
         String query = "INSERT INTO user (mail, password) VALUES (?, ?)";
 
         try (Connection conn = connection();
@@ -33,7 +31,6 @@ public class Create_User_Emergency {
             pstmt.setString(1, email);
             pstmt.setString(2, hashedPassword);
 
-            // Execute the insert query
             pstmt.executeUpdate();
             System.out.println("User created successfully!");
 
@@ -42,19 +39,16 @@ public class Create_User_Emergency {
         }
     }
 
-    // Method to hash the password using bcrypt
     private String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
-    // Main method for testing the user creation
     public static void main(String[] args) {
         Create_User_Emergency createUserEmergency = new Create_User_Emergency();
-        // Provide the email and password for the user
-        String email = "Tesline";  // The email provided
-        String password = "Admin7894$$";  // The password provided
 
-        // Call the createUser method to insert the new user
+        String email = "Tesline";
+        String password = "Admin7894$$";
+
         createUserEmergency.createUser(email, password);
     }
 }
